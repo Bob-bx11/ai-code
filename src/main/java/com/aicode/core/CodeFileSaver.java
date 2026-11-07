@@ -49,7 +49,8 @@ public class CodeFileSaver {
      * 写入单个文件
      */
     private static void writeToFile(String dirPath, String filename, String content) {
+        // 模型可能漏掉某个代码块，兜底为空字符串，避免整个保存流程因 NPE 中断
         String filePath = dirPath + File.separator + filename;
-        FileUtil.writeString(content, filePath, StandardCharsets.UTF_8);
+        FileUtil.writeString(StrUtil.nullToEmpty(content), filePath, StandardCharsets.UTF_8);
     }
 }
