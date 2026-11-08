@@ -1,10 +1,12 @@
 package com.aicode.service;
 
 import com.aicode.model.dto.app.AppQueryRequest;
+import com.aicode.model.entity.User;
 import com.aicode.model.vo.AppVO;
 import com.mybatisflex.core.query.QueryWrapper;
 import com.mybatisflex.core.service.IService;
 import com.aicode.model.entity.App;
+import reactor.core.publisher.Flux;
 
 import java.util.List;
 
@@ -39,6 +41,16 @@ public interface AppService extends IService<App> {
      * @return 查询参数
      */
     QueryWrapper getQueryWrapper(AppQueryRequest appQueryRequest);
+
+    /**
+     * 聊天生成代码
+     *
+     * @param appId   应用id
+     * @param message 消息
+     * @param loginUser 登录用户
+     * @return 代码
+     */
+    Flux<String> chatToGenCode(Long appId, String message, User loginUser);
 
 
 }
