@@ -1,7 +1,7 @@
 package com.aicode.aop;
 
 import com.aicode.annotation.AuthCheck;
-import com.aicode.entity.User;
+import com.aicode.model.entity.User;
 import com.aicode.exception.BusinessException;
 import com.aicode.exception.ErrorCode;
 import com.aicode.model.enums.UserRoleEnum;

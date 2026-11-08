@@ -12,7 +12,7 @@ import com.aicode.model.vo.UserVO;
 import com.aicode.service.UserService;
 import com.mybatisflex.core.query.QueryWrapper;
 import com.mybatisflex.spring.service.impl.ServiceImpl;
-import com.aicode.entity.User;
+import com.aicode.model.entity.User;
 import com.aicode.mapper.UserMapper;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Service;

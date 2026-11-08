@@ -5,7 +5,7 @@ import com.aicode.model.vo.LoginUserVO;
 import com.aicode.model.vo.UserVO;
 import com.mybatisflex.core.query.QueryWrapper;
 import com.mybatisflex.core.service.IService;
-import com.aicode.entity.User;
+import com.aicode.model.entity.User;
 import jakarta.servlet.http.HttpServletRequest;
 
 import java.util.List;

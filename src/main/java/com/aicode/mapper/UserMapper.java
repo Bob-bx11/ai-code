@@ -1,7 +1,7 @@
 package com.aicode.mapper;
 
 import com.mybatisflex.core.BaseMapper;
-import com.aicode.entity.User;
+import com.aicode.model.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

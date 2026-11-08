@@ -1,4 +1,4 @@
-package com.aicode.entity;
+package com.aicode.model.entity;
 
 import com.mybatisflex.annotation.Column;
 import com.mybatisflex.annotation.Id;
