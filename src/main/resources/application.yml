@@ -11,6 +11,14 @@ spring:
     username: root
     password: 123456
 
+  #redis
+  data:
+    redis:
+      host: localhost
+      database: 1
+      port: 6379
+      ttl: 3600
+
 
 server:
   port: 8123
@@ -21,6 +29,7 @@ server:
 springdoc:
   group-configs:
     - group: 'default'
+      paths-to-match: '**'
       packages-to-scan: com.aicode.controller
 # knife4j
 knife4j:

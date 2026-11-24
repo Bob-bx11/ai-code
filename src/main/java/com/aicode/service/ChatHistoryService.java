@@ -6,6 +6,7 @@ import com.mybatisflex.core.paginate.Page;
 import com.mybatisflex.core.query.QueryWrapper;
 import com.mybatisflex.core.service.IService;
 import com.aicode.model.entity.ChatHistory;
+import dev.langchain4j.memory.chat.MessageWindowChatMemory;
 
 import java.time.LocalDateTime;
 
@@ -15,6 +16,8 @@ import java.time.LocalDateTime;
  * @author <a href="https://github.com/Bob-bx11">Bob-bx11</a>
  */
 public interface ChatHistoryService extends IService<ChatHistory> {
+    int loadChatHistoryToMemory(Long appId, MessageWindowChatMemory chatMemory, int maxCount);
+
     /**
      * 添加对话消息
      *
