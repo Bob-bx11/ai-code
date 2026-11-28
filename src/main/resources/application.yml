@@ -3,6 +3,12 @@ spring:
     name: AICode
   profiles:
     active: local
+  session:
+    timeout: 2592000
+    data:
+      redis:
+        namespace: spring:session
+        flush-mode: on_save
 
   # mysql
   datasource:
@@ -15,21 +21,22 @@ spring:
   data:
     redis:
       host: localhost
-      database: 1
       port: 6379
-      ttl: 3600
-
 
 server:
   port: 8123
   servlet:
     context-path: /api
+    #cookie 30 天过期
+    session:
+      cookie:
+        max-age: 2592000
 
 # springdoc-openapi
 springdoc:
   group-configs:
     - group: 'default'
-      paths-to-match: '**'
+      paths-to-match: /**
       packages-to-scan: com.aicode.controller
 # knife4j
 knife4j:
